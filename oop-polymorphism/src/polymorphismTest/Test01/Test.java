@@ -1,5 +1,4 @@
 package polymorphismTest.Test01;
-
 public class Test {
     public static void main(String[] args) {
         //创建对象 并调用register方法
