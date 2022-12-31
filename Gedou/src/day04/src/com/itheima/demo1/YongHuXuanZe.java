@@ -9,10 +9,17 @@ public class YongHuXuanZe {
         System.out.println("请选择按键:");
         int number= sc.nextInt();
         switch(number){
-            case 1-> System.out.println("机票查询");
-            case 2-> System.out.println("机票预订");
-            case 3-> System.out.println("机票改签");
-            default ->  System.out.println("退出服务");
+            case 1:
+                System.out.println("机票查询");
+                break;
+            case 2:
+                System.out.println("机票预订");
+                break;
+            case 3:
+                System.out.println("机票改签");
+                break;
+            default :
+                System.out.println("退出服务");
         }
     }
 }

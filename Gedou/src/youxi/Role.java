@@ -69,14 +69,13 @@ public class Role {
         this.girlFace = girlFace;
     }
 
+    public Role() {
+    }
     public Role(String name, int blood,char gender) {
         this.name = name;
         this.blood = blood;
         this.gender=gender;
         setFace(gender);
-    }
-
-    public Role() {
     }
 
     public String getName() {
