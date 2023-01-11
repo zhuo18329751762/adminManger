@@ -18,11 +18,12 @@ public class IntegerDemo1 {
         //3 这两种方式获取对象的区别
         Integer i6=Integer.valueOf(127);
         Integer i7=Integer.valueOf(127);
-        System.out.println(i6==i7);
+        System.out.println(i6==i7);//true
 
+        //[-128,128)都不会创建新对象，会使用底层提前创建好的,不包含128
         Integer i8=Integer.valueOf(128);
         Integer i9=Integer.valueOf(128);
-        System.out.println(i8==i9);
+        System.out.println(i8==i9);//false
 
         Integer i10=new Integer(127);
         Integer i11=new Integer(127);
