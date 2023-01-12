@@ -11,6 +11,8 @@
       <module fileurl="file://$PROJECT_DIR$/oop-package/oop-package.iml" filepath="$PROJECT_DIR$/oop-package/oop-package.iml" />
       <module fileurl="file://$PROJECT_DIR$/oop-polymorphism/oop-polymorphism.iml" filepath="$PROJECT_DIR$/oop-polymorphism/oop-polymorphism.iml" />
       <module fileurl="file://$PROJECT_DIR$/op-interface/op-interface.iml" filepath="$PROJECT_DIR$/op-interface/op-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/search-code/search-code.iml" filepath="$PROJECT_DIR$/search-code/search-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sort/sort.iml" filepath="$PROJECT_DIR$/sort/sort.iml" />
     </modules>
   </component>
 </project>
