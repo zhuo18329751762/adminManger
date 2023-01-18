@@ -14,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/op-interface/op-interface.iml" filepath="$PROJECT_DIR$/op-interface/op-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/search-code/search-code.iml" filepath="$PROJECT_DIR$/search-code/search-code.iml" />
       <module fileurl="file://$PROJECT_DIR$/sort/sort.iml" filepath="$PROJECT_DIR$/sort/sort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vessel/vessel.iml" filepath="$PROJECT_DIR$/vessel/vessel.iml" />
     </modules>
   </component>
 </project>
