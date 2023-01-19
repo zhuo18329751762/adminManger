@@ -1,25 +1,10 @@
 package SetDemo;
 
-import java.util.Objects;
-
-public class Student {
+public class Student implements Comparable<Student>{
     private String name;
     private int age;
 
     public Student() {
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Student student = (Student) o;
-        return age == student.age && Objects.equals(name, student.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, age);
     }
 
     public Student(String name, int age) {
@@ -61,5 +46,23 @@ public class Student {
 
     public String toString() {
         return "Student{name = " + name + ", age = " + age + "}";
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        // this 表示当前要添加的元素
+        // o 表示红黑树中存在的元素
+        //指定排序规则
+//        要求按照学生年龄进行排序
+//        同年龄按照姓名字母排序(暂不考虑中文)
+//        同姓名，同年龄认为是同一个人
+        //只看年龄
+        System.out.println("this "+this);
+        System.out.println("0 "+o);
+        int result=this.getAge()-o.getAge();
+        return result;
+        //返回值
+        //负数 表示当前要添加的元素是小的，放左边
+        //正数 表示当前要添加的元素是大的，放右边
     }
 }
