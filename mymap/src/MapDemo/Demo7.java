@@ -19,7 +19,6 @@ public class Demo7 {
         m.put(s1,"陕西");
         m.put(s2,"山西");
         m.put(s3,"广西");
-        m.put(s4,"上海");
         // 遍历集合
 //        Set<Student> keys = m.keySet();
 //        for (Student key : keys) {
