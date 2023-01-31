@@ -144,6 +144,7 @@ public class GameJFrame extends JFrame implements ActionListener {
                 int value2 = getValue(o2);
 
                 //倒序排序
+                //图形化界面中。大的牌在左边
                 int flag=value2-value1;
                 //如果牌的价值一样，按照花色排序
                 if(flag==0){
@@ -166,9 +167,18 @@ public class GameJFrame extends JFrame implements ActionListener {
 
         //计算大小王的价值
         if(color==5){
-            return value+=50;
+            return value+=100;
         }
-
+        if(value==1){
+            //A的基础价值为1
+            return value+=20;
+        }
+        if(value==2){
+            //2的基础价值为2
+            return value+=20;
+        }
+        //其他的牌返回基础价值
+        return value;
     }
 
 
