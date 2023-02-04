@@ -1,4 +1,4 @@
-package ByteStream;
+package FileOutputStream;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,7 +19,7 @@ public class Demo1 {
         // 1 创建对象
         //写出 输出流 OutputStream
         //本地文件 File
-        FileOutputStream fos=new FileOutputStream("myio\\a.txt");
+        FileOutputStream fos=new FileOutputStream("myio\\b.txt");
         //写入数据
         fos.write(97);
         //释放资源

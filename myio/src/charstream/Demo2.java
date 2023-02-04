@@ -9,7 +9,7 @@ public class Demo2 {
         // 1 创建对象
         FileReader fr=new FileReader("myio\\a.txt");
         // 2 读取数据
-        char[] chars=new char[2];
+        char[] chars=new char[1024];
         int len;
         while ((len=fr.read(chars))!=-1){
             System.out.println(new String(chars,0,len));
