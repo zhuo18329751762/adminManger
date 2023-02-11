@@ -1,4 +1,4 @@
-package waitAndNotify;
+package waitAndNotify1;
 
 public class ThreadDemo {
     public static void main(String[] args) {

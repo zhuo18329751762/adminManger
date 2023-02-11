@@ -1,4 +1,4 @@
-package waitAndNotify;
+package waitAndNotify1;
 
 public class Desk {
     /*
