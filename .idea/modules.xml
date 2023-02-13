@@ -11,10 +11,12 @@
       <module fileurl="file://$PROJECT_DIR$/myFunction/myFunction.iml" filepath="$PROJECT_DIR$/myFunction/myFunction.iml" />
       <module fileurl="file://$PROJECT_DIR$/myStatic/myStatic.iml" filepath="$PROJECT_DIR$/myStatic/myStatic.iml" />
       <module fileurl="file://$PROJECT_DIR$/mycontainer/mycontainer.iml" filepath="$PROJECT_DIR$/mycontainer/mycontainer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mydynamicproxy/mydynamicproxy.iml" filepath="$PROJECT_DIR$/mydynamicproxy/mydynamicproxy.iml" />
       <module fileurl="file://$PROJECT_DIR$/myexception/myexception.iml" filepath="$PROJECT_DIR$/myexception/myexception.iml" />
       <module fileurl="file://$PROJECT_DIR$/myfile/myfile.iml" filepath="$PROJECT_DIR$/myfile/myfile.iml" />
       <module fileurl="file://$PROJECT_DIR$/myio/myio.iml" filepath="$PROJECT_DIR$/myio/myio.iml" />
       <module fileurl="file://$PROJECT_DIR$/mymap/mymap.iml" filepath="$PROJECT_DIR$/mymap/mymap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myreflect/myreflect.iml" filepath="$PROJECT_DIR$/myreflect/myreflect.iml" />
       <module fileurl="file://$PROJECT_DIR$/mysocketnet/mysocketnet.iml" filepath="$PROJECT_DIR$/mysocketnet/mysocketnet.iml" />
       <module fileurl="file://$PROJECT_DIR$/mystream/mystream.iml" filepath="$PROJECT_DIR$/mystream/mystream.iml" />
       <module fileurl="file://$PROJECT_DIR$/mythread/mythread.iml" filepath="$PROJECT_DIR$/mythread/mythread.iml" />
