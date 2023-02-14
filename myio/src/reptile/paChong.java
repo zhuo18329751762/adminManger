@@ -9,8 +9,7 @@ public class paChong {
     public static void main(String[] args) throws IOException {
         // 1 定义变量记录网址
         String Net=
-                "https://www.douyin.com/";
-
+                "https://edu-wenku.bdimg.com/v1/pc/2020%E6%96%B0%E9%A6%96%E9%A1%B5/wenku-header-icon.svg";
         // 2 爬取数据,把网址上的所有数据拼接成一个字符串
         String NetStr = wedCrawler(Net);
         System.out.println(NetStr);
@@ -34,5 +33,9 @@ public class paChong {
         isr.close();
         // 6 把读取到的数据返回
         return sb.toString();
+
+        /*
+
+         */
     }
 }
