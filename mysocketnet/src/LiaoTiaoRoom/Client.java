@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args) throws IOException {
-        Socket socket=new Socket("127.0.0.1",10086);
+        Socket socket=new Socket("127.0.0.1",10001);
         System.out.println("服务器已连接成功!");
         Scanner sc=new Scanner(System.in);
         while (true){
@@ -47,17 +47,16 @@ public class Client {
         //判断登录状态
         BufferedReader br=new BufferedReader(new InputStreamReader(socket.getInputStream()));
         String str = br.readLine();
-        System.out.println(str);
         if(str.equals("登陆成功")){
             System.out.println("登陆成功");
             //单独开辟一条线程，用来保存聊天记录
-            new Thread(new MyRunnable(socket)).start();
+            new Thread(new ClientRunnable(socket)).start();
             //开始聊天
             talk(bw);
         }else if(str.equals("密码有误")){
             System.out.println("密码有误");
         }else if(str.equals("用户名不存在")){
-            System.out.println("该用户名不存在");
+            System.out.println("用户名不存在");
         }
     }
 

@@ -17,21 +17,26 @@ public class ServerRunnable implements Runnable{
 
     @Override
     public void run() {
+        //获取输入流
+        BufferedReader br = null;
         try {
-            //获取输入流
-            BufferedReader br=new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            while (true) {
-                String str = br.readLine();
-                switch (str) {
-                    case "login" -> login(socket, tm);
-                    case "register" -> System.out.println("注册");
-                }
-            }
+            br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
+        while (true) {
+            try {
+                String str = br.readLine();
+                switch (str) {
+                    case "login" -> login(socket);
+                    case "register" -> System.out.println("注册");
+                }
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+        }
     }
-    private static void login(Socket socket, TreeMap<String, String> tm) throws IOException {
+    private  void login(Socket socket) throws IOException {
         //登录
         //获取输入流
         BufferedReader br=new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -46,6 +51,7 @@ public class ServerRunnable implements Runnable{
             if(passWord.equals(tm.get(name))){
                 //登陆成功
                 bw.write("登陆成功");
+                bw.newLine();
                 bw.flush();
                 //登录成功的时候，就需要把客户端的连接对象Socket保存起来
                 Server.list.add(socket);
@@ -54,16 +60,18 @@ public class ServerRunnable implements Runnable{
                 talk(br, name);
             }else{
                 //密码错误
-                bw.write("密码错误");
+                bw.write("密码有误");
+                bw.newLine();
                 bw.flush();
             }
         }else{
             //用户名不存在
-            bw.write("用户名存在");
+            bw.write("用户名不存在");
+            bw.newLine();
             bw.flush();
         }
     }
-    private static void talk(BufferedReader br,String userName) throws IOException {
+    private  void talk(BufferedReader br,String userName) throws IOException {
         while (true) {
             String message = br.readLine();
             System.out.println(userName + "发送过来消息：" + message);
@@ -76,7 +84,7 @@ public class ServerRunnable implements Runnable{
         }
 
     }
-    private static void writeMessage(Socket socket,String message) throws IOException {
+    private  void writeMessage(Socket socket,String message) throws IOException {
         //获取输出流
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
         bw.write(message);

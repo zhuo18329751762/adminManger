@@ -4,12 +4,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.nio.charset.Charset;
 
 public class paChong {
     public static void main(String[] args) throws IOException {
         // 1 定义变量记录网址
         String Net=
-                "https://edu-wenku.bdimg.com/v1/pc/2020%E6%96%B0%E9%A6%96%E9%A1%B5/wenku-header-icon.svg";
+                "https://www.pincai.com/article/1074862.htm";
         // 2 爬取数据,把网址上的所有数据拼接成一个字符串
         String NetStr = wedCrawler(Net);
         System.out.println(NetStr);
@@ -24,7 +25,7 @@ public class paChong {
         URLConnection conn = url.openConnection();
         // 4 读取数据
         //将字节流转换为字符流
-        InputStreamReader isr=new InputStreamReader(conn.getInputStream());
+        InputStreamReader isr=new InputStreamReader(conn.getInputStream(), Charset.forName("GBK"));
         int ch;
         while ((ch=isr.read())!=-1){
             sb.append((char) ch);
