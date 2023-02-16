@@ -12,6 +12,7 @@ public class InsertDemo1 {
                 break;
             }
         }
+        System.out.println(startIndex+"测试");
         //遍历startIndex到末尾
         for (int i = startIndex; i < arr.length; i++) {
                     while(i>0&&arr[i]<arr[i-1]){
