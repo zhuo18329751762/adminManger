@@ -10,7 +10,7 @@ public class paChong {
     public static void main(String[] args) throws IOException {
         // 1 定义变量记录网址
         String Net=
-                "https://www.pincai.com/article/1074862.htm";
+                "https://www.xinfet.com/zhfw/27547.html";
         // 2 爬取数据,把网址上的所有数据拼接成一个字符串
         String NetStr = wedCrawler(Net);
         System.out.println(NetStr);
