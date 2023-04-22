@@ -1,3 +1,5 @@
+package leetCood50;
+
 public class Demo11 {
     /*
     给定一个长度为 n 的整数数组height。有n条垂线，第 i 条线的两个端点是(i, 0)和(i, height[i])。

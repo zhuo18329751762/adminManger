@@ -1,3 +1,5 @@
+package leetCood50;
+
 import java.util.Stack;
 
 public class Demo20 {

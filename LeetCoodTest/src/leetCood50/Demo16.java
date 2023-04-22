@@ -1,3 +1,5 @@
+package leetCood50;
+
 import java.util.Arrays;
 
 public class Demo16 {

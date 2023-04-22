@@ -1,5 +1,4 @@
-import java.util.Arrays;
-import java.util.HashMap;
+package leetCood50;
 
 public class Demo5 {
     /*
