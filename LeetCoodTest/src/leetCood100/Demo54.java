@@ -17,7 +17,6 @@ public class Demo54 {
     }
     public static List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> list=new ArrayList<>();
-        //int len=matrix.length-1;
         int width=matrix[0].length-1;
         int hig=matrix.length-1;
         if(width==0){
@@ -34,25 +33,21 @@ public class Demo54 {
         int max=matrix[0].length*matrix.length;
         while (width>0&&hig>0){
             for (int num=i; num <= width&&count<max;num++) {
-                //System.out.println(matrix[i][num]);
                 list.add(matrix[i][num]);
                 count++;
             }
             System.out.println();
             for(int num=i+1;num<=hig&&count<max;num++){
-                //System.out.println(matrix[num][width]);
                 list.add(matrix[num][width]);
                 count++;
             }
             System.out.println();
             for(int num=width-1;num>=i&&count<max;num--){
-                //System.out.println(matrix[hig][num]);
                 list.add(matrix[hig][num]);
                 count++;
             }
             System.out.println();
             for(int num=hig-1;num>i&&count<max;num--){
-                //System.out.println(matrix[num][i]);
                 list.add(matrix[num][i]);
                 count++;
             }
