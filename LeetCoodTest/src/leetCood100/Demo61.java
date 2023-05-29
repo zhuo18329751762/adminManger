@@ -20,7 +20,7 @@ public class Demo61 {
         l2.next=l3;
         l3.next=l4;
         l4.next=l5;
-        ListNode listNode = rotateRight(l1, 2);
+        ListNode listNode = rotateRight(l1, 1);
         while (listNode!=null){
             System.out.println(listNode.val);
             listNode=listNode.next;
