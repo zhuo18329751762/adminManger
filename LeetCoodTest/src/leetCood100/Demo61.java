@@ -17,10 +17,10 @@ public class Demo61 {
         ListNode l4=new ListNode(4);
         ListNode l5=new ListNode(5);
         l1.next=l2;
-        l2.next=l3;
-        l3.next=l4;
-        l4.next=l5;
-        ListNode listNode = rotateRight(l1, 1);
+//        l2.next=l3;
+//        l3.next=l4;
+//        l4.next=l5;
+        ListNode listNode = rotateRight(l1, 2);
         while (listNode!=null){
             System.out.println(listNode.val);
             listNode=listNode.next;
@@ -28,15 +28,26 @@ public class Demo61 {
     }
 
     public static ListNode rotateRight(ListNode head, int k) {
+        if(k==0){
+            return head;
+        }
         //记录头结点
         ListNode h=head;
+        //记录节点个数
+        int num=0;
         //创建一个栈模型
         Deque<ListNode> stack=new LinkedList<>();
         while (head!=null){
             //入栈
             stack.push(head);
             head=head.next;
+            num++;
         }
+        System.out.println(num);
+        if(num==0||num==1||k%num==0){
+            return h;
+        }
+        k=k%num;
         //找到倒数第k个节点
         for (int i = 0; i < k; i++) {
             stack.pop();
@@ -52,7 +63,4 @@ public class Demo61 {
         l.next=h;
         return l1;
     }
-
-
-
 }
