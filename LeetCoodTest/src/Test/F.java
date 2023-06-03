@@ -1,18 +1,11 @@
 package Test;
 
 class F {
-
-    int i;
-
-    static String s;
-
-    void imethod(){
+    public void m(int a,String b){
 
     }
-
-    static void smethod(){
+    public void m(String b,int a){
 
     }
-
 }
 
