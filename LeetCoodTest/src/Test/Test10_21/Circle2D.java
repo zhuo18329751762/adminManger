@@ -34,14 +34,15 @@ public class Circle2D {
         return false;
     }
     public boolean contains(Circle2D circle2D){
-        if(circle2D.x+ circle2D.radius>this.x+this.radius||circle2D.y+ circle2D.radius>this.y+this.radius){
-            return false;
+        double dis=Math.sqrt(Math.pow(this.x- circle2D.x,2)+Math.pow(this.y- circle2D.y,2));
+        if(dis<Math.abs(circle2D.radius-this.radius)){
+            return true;
         }
-        return true;
+        return false;
     }
     public boolean overlaps(Circle2D circle2D){
         double num=Math.sqrt(Math.pow(circle2D.x-x,2)+Math.pow(circle2D.y-y,2));
-        if(num>this.radius&&num<this.radius+ circle2D.radius){
+        if(num< circle2D.radius+radius&&num>Math.abs(circle2D.radius-this.radius)){
             return true;
         }
         return false;
