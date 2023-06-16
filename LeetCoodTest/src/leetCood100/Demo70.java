@@ -22,5 +22,6 @@ public class Demo70 {
             a2=temp+a1;
         }
         return a2;
+
     }
 }
