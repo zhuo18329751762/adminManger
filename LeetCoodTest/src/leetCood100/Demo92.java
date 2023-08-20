@@ -9,23 +9,23 @@ public class Demo92 {
         ListNode l1=new ListNode(1);
         ListNode l2=new ListNode(2);
         ListNode l3=new ListNode(3);
-//        ListNode l4=new ListNode(4);
-//        ListNode l5=new ListNode(5);
-//        ListNode l6=new ListNode(6);
-//        ListNode l7=new ListNode(7);
+        ListNode l4=new ListNode(4);
+        ListNode l5=new ListNode(5);
+        ListNode l6=new ListNode(6);
+        ListNode l7=new ListNode(7);
         l1.next=l2;
         l2.next=l3;
-//        l3.next=l4;
-//        l4.next=l5;
-//        l5.next=l6;
-//        l6.next=l7;
+        l3.next=l4;
+        l4.next=l5;
+        l5.next=l6;
+        l6.next=l7;
         ListNode listNode = l1;
-        ListNode partition = reverseBetween(listNode, 1,2);
+        ListNode partition = reverseBetween(listNode, 2,6);
         System.out.println("测试");
-        while (partition!=null){
-            System.out.println(partition.val);
-            partition=partition.next;
-        }
+//        while (partition!=null){
+//            System.out.println(partition.val);
+//            partition=partition.next;
+//        }
     }
 
     public static ListNode reverseBetween(ListNode head, int left, int right) {
@@ -45,6 +45,9 @@ public class Demo92 {
         for (int i = 0; i < right - left + 1; i++) {
             rightNode = rightNode.next;
         }
+        System.out.println(pre.next.val);
+        System.out.println(rightNode.next.val);
+
 
         // 第 3 步：切断出一个子链表（截取链表）
         ListNode leftNode = pre.next;
@@ -56,6 +59,7 @@ public class Demo92 {
 
         // 第 4 步：同第 206 题，反转链表的子区间
         reverseLinkedList(leftNode);
+
 
         // 第 5 步：接回到原来的链表中
         pre.next = rightNode;
