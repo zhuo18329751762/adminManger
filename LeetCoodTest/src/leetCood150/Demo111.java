@@ -9,7 +9,6 @@ public class Demo111 {
 说明：叶子节点是指没有子节点的节点。
      */
     public static void main(String[] args) {
-
     }
 
     public int minDepth(TreeNode root) {
