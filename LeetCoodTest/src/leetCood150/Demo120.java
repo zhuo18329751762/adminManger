@@ -11,6 +11,10 @@ public class Demo120 {
 相邻的结点 在这里指的是 下标 与 上一层结点下标 相同或者等于 上一层结点下标 + 1 的两个结点。
 也就是说，如果正位于当前行的下标 i ，那么下一步可以移动到下一行的下标 i 或 i + 1 。
      */
+    public static void main(String[] args) {
+        int a=010;
+        System.out.println(a);
+    }
 
 
     public int minimumTotal(List<List<Integer>> triangle) {
@@ -31,7 +35,7 @@ public class Demo120 {
         return minTotal;
     }
 
-    //暴力算法
+    //暴力算法 超时
 //    static int imunTotal=Integer.MAX_VALUE;
 //    public static int minimumTotal(List<List<Integer>> triangle) {
 //        if(triangle==null){
