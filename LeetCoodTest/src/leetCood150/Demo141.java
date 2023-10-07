@@ -32,7 +32,6 @@ public class Demo141 {
         l2.next=l3;
         l3.next=l1;
         System.out.println(hasCycle(head));
-
     }
         public static boolean hasCycle(ListNode head) {
             if(head==null||head.next==null){
