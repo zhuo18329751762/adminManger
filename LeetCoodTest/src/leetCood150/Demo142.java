@@ -23,14 +23,27 @@ public class Demo142 {
         System.out.println(detectCycle(head));
     }
     public static ListNode detectCycle(ListNode head) {
-        Set<ListNode> set=new HashSet<>();
-        while (head!=null){
-            if(set.contains(head)){
-                return head;
-            }
-            set.add(head);
-            head=head.next;
+        if(head==null||head.next==null){
+            return null;
         }
-        return null;
+        ListNode fast=head;
+        ListNode slow=head;
+        while(true){
+            if(fast!=null&&fast.next!=null){
+                fast=fast.next.next;
+                slow=slow.next;
+                if(fast==slow){
+                    break;
+                }
+            }else{
+                return null;
+            }
+        }
+        slow=head;
+        while(slow!=fast){
+            slow=slow.next;
+            fast=fast.next;
+        }
+        return slow;
     }
 }
