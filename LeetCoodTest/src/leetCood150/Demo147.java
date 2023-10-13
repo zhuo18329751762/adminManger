@@ -15,9 +15,6 @@ public class Demo147 {
 
 对链表进行插入排序。
      */
-
-
-
     public ListNode insertionSortList(ListNode head) {
         if(head==null||head.next==null){
             return null;
