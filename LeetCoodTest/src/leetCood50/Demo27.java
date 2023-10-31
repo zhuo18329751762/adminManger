@@ -36,8 +36,6 @@ public class Demo27 {
                 left++;
             }
         }
-        System.out.println(Arrays.toString(nums));
-        System.out.println(nums[left-1]);
         return left;
     }
 }
